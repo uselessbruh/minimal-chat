@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</head>
+
+<body>
+    <!-- Username Entry Screen -->
+    <div id="usernameScreen" class="username-screen">
+        <div class="username-box">
+            <h2>Welcome to Chat Room</h2>
+            <p>Enter your name to join the conversation</p>
+            <input id="usernameInput" type="text" placeholder="Your name..." maxlength="20">
+            <button onclick="joinChat()">Join Chat</button>
+        </div>
+    </div>
+
+    <!-- Chat Screen -->
+    <div id="chatScreen" class="chat-screen" style="display: none;">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h3>Chat Room</h3>
+                <div class="user-info">
+                    <span id="currentUser"></span>
+                    <button onclick="leaveChat()" class="leave-btn">Leave</button>
+                </div>
+            </div>
+            <div id="messages" class="messages"></div>
+            <div class="message-input-container">
+                <input id="messageInput" type="text" placeholder="Type your message..." maxlength="500">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
