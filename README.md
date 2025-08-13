@@ -230,7 +230,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🚀 Getting Started Video
+## 🚀 Getting Started
 
 *Want to see it in action? Here's how to get started:*
 
@@ -243,3 +243,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Made with using Flask and Socket.IO**
+
